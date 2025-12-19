@@ -204,19 +204,48 @@ for (var i = 0; i < palette.length; i++) {
   palette[i].addEventListener("click", function (e) {
     var colorTheme = this.classList.value;
     console.log(colorTheme);
-    document.body.classList.remove(
-      "bg-yellow-500",
-      "bg-red-500",
-      "bg-secondary",
-      "bg-primary",
-      "bg-slate-400",
-      "bg-emerald-500"
-    );
-    // document.body.classList.add(colorTheme)
-
-    if (colorTheme == "bg-yellow-500") {
-      document.body.classList.add("text-emerald-600");
-      console.log("hhhh");
+    if (colorTheme == "bg-primary") {
+      document.documentElement.style.setProperty("--color-primary", "#3b82f6");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#06b6d4"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#22d3ee");
+    } else if (colorTheme == "bg-secondary") {
+      document.documentElement.style.setProperty("--color-primary", "#9366f1");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#8b5cf6"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#a855f7");
+    } else if (colorTheme == "bg-red-500") {
+      document.documentElement.style.setProperty("--color-primary", "#ef4444");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#f43f5e"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#fb7185");
+    } else if (colorTheme == "bg-yellow-500") {
+      document.documentElement.style.setProperty("--color-primary", "#f59e0b");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#ea580c"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#fbbf24");
+    } else if (colorTheme == "bg-emerald-500") {
+      document.documentElement.style.setProperty("--color-primary", "#10b981");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#059669"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#34d399");
+    } else if (colorTheme == "bg-slate-400") {
+      document.documentElement.style.setProperty("--color-primary", "#ec4899");
+      document.documentElement.style.setProperty(
+        "--color-secondary",
+        "#06b6d4"
+      );
+      document.documentElement.style.setProperty("--color-accent", "#22d3ee");
     }
   });
 }
